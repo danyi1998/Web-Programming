@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javaScript" src="CheckInputValidity.js"></script> 
+        <script type="text/javaScript" src="JavaScript.js"></script>
         <title>Net Centric Assignment 2</title>
     </head>
 
@@ -15,17 +15,25 @@
             A banana costs 39 cents<br>
         </p>
 
-        <form>
-            Name of User:
-            <input type="text" name="name"><br>
-
-            <!--if input into number of fruits textboxes changes, then raise an event-->  
-            Number of Apples:
-            <input type="text" name="apples" onchange="checkInputValidity(this.value);"><br> 
-            Number of Oranges:
-            <input type="text" name="oranges" onchange="checkInputValidity(this.value);"><br>
-            Number of Bananas:
-            <input type="text" name="bananas" onchange="checkInputValidity(this.value);"><br> 
-        </form>
+        <p>
+            <form>
+                Name of User:
+                <input type="text" name="name"><br>
+    
+                <!--if input into number of fruits textboxes changes, then raise an event-->  
+                Number of Apples:
+                <input type="text" name="apples" onchange="userInput(this.value);" id="apple"><br> 
+                Number of Oranges:
+                <input type="text" name="oranges" onchange="userInput(this.value);" id="orange"><br>
+                Number of Bananas:
+                <input type="text" name="bananas" onchange="userInput(this.value);" id="banana"><br> 
+            </form>
+        </p>
+        
+        <p>
+            <!--textbox to show total cost of order-->
+            <input type="text" name="cost" onfocus="this.blur();" id="totalCost"><br>  
+        </p>
+        
     </body>
 </html> 
