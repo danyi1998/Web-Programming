@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javaScript" src="CheckInputValidity.js"></script> 
+        <title>Net Centric Assignment 2</title>
+    </head>
+
+    <body>
+        <h1>Purchasing Fruits</h1>
+
+        <p>
+            <h3>Prices of Fruits</h3>
+            An apple costs 69 cents<br>
+            An orange costs 59 cents<br>
+            A banana costs 39 cents<br>
+        </p>
+
+        <form>
+            Name of User:
+            <input type="text" name="name"><br>
+
+            <!--if input into number of fruits textboxes changes, then raise an event-->  
+            Number of Apples:
+            <input type="text" name="apples" onchange="checkInputValidity(this.value);"><br> 
+            Number of Oranges:
+            <input type="text" name="oranges" onchange="checkInputValidity(this.value);"><br>
+            Number of Bananas:
+            <input type="text" name="bananas" onchange="checkInputValidity(this.value);"><br> 
+        </form>
+    </body>
+</html> 
