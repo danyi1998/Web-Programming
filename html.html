@@ -16,7 +16,7 @@
         </p>
 
         <p>
-            <form>
+            <form action="server.php" id="order" method="post"> 
                 Name of User:
                 <input type="text" name="name"><br>
     
@@ -27,13 +27,24 @@
                 <input type="text" name="oranges" onchange="userInput(this.value);" id="orange"><br>
                 Number of Bananas:
                 <input type="text" name="bananas" onchange="userInput(this.value);" id="banana"><br> 
+                
+                <!--textbox to show total cost of order-->
+                Total Cost:
+                <input type="text" name="cost" onfocus="this.blur();" id="totalCost"><br> 
+
+                <!--radio buttons-->
+                Visa:
+                <input type="radio" name="payment" value="visa">
+                Mastercard:
+                <input type="radio" name="payment" value="mastercard">
+                Discover:
+                <input type="radio" name="payment" value="discover"><br>
+
+                <!--submit button-->
+                <input type="submit" value="Submit Form">
             </form>
         </p>
         
-        <p>
-            <!--textbox to show total cost of order-->
-            <input type="text" name="cost" onfocus="this.blur();" id="totalCost"><br>  
-        </p>
         
     </body>
 </html> 
