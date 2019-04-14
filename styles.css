@@ -1,0 +1,15 @@
+.price-info
+{
+    color: cadetblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.form-style
+{
+    max-width: 400px;
+    margin: auto;
+    border: 2px solid rgb(9, 80, 121);
+    padding: 1rem;
+    
+}

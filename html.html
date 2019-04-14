@@ -2,49 +2,44 @@
 <html>
     <head>
         <script type="text/javaScript" src="JavaScript.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles.css">
         <title>Net Centric Assignment 2</title>
     </head>
 
     <body>
-        <h1>Purchasing Fruits</h1>
+        <h1 style="color:chocolate; text-align: center">Purchasing Fruits</h1>
 
-        <p>
-            <h3>Prices of Fruits</h3>
-            An apple costs 69 cents<br>
-            An orange costs 59 cents<br>
-            A banana costs 39 cents<br>
+        <p class="price-info">
+            An apple costs 69 cents. An orange costs 59 cents. A banana costs 39 cents.
         </p>
 
-        <p>
-            <form action="server.php" id="order" method="post" onsubmit="return presence();"> 
-                Name of User:
-                <input type="text" name="name" id="name"><br>
-    
-                <!--if input into number of fruits textboxes changes, then raise an event-->  
-                Number of Apples:
-                <input type="text" name="apples" onchange="userInput(this.value);" id="apple"><br> 
-                Number of Oranges:
-                <input type="text" name="oranges" onchange="userInput(this.value);" id="orange"><br>
-                Number of Bananas:
-                <input type="text" name="bananas" onchange="userInput(this.value);" id="banana"><br> 
-                
-                <!--textbox to show total cost of order-->
-                Total Cost:
-                <input type="text" name="cost" onfocus="this.blur();" id="totalCost"><br> 
+        <form action="server.php" id="order" method="post" onsubmit="return presence();" class="form-style"> 
+            <h2 style="color:darkolivegreen; text-align: center">Your Order</h2>
+            Name of User:<br>
+            <input type="text" name="name" id="name"><br><br>
 
-                <!--radio buttons-->
-                Visa:
-                <input type="radio" name="payment" value="visa">
-                Mastercard:
-                <input type="radio" name="payment" value="mastercard">
-                Discover:
-                <input type="radio" name="payment" value="discover"><br>
+            <!--if input into number of fruits textboxes changes, then raise an event-->  
+            Number of Apples:<br>
+            <input type="text" name="apples" onchange="userInput(this.value);" id="apple"><br><br>
+            Number of Oranges:<br>
+            <input type="text" name="oranges" onchange="userInput(this.value);" id="orange"><br><br>
+            Number of Bananas:<br>
+            <input type="text" name="bananas" onchange="userInput(this.value);" id="banana"><br><br>
+            
+            <!--textbox to show total cost of order-->
+            Total Cost:<br>
+            <input type="text" name="cost" onfocus="this.blur();" id="totalCost"><br><br>
 
-                <!--submit button-->
-                <input type="submit" value="Submit Form">
-            </form>
-        </p>
-        
-        
+            <!--radio buttons-->
+            Visa:
+            <input type="radio" name="payment" value="visa">
+            Mastercard:
+            <input type="radio" name="payment" value="mastercard">
+            Discover:
+            <input type="radio" name="payment" value="discover"><br><br>
+
+            <!--submit button-->
+            <input type="submit" value="Submit Form">
+        </form>
     </body>
 </html> 
