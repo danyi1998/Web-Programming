@@ -81,34 +81,40 @@
     "<html>
         <head>
             <title>Receipt</title>
+            <link rel='stylesheet' type='text/css' href='styles.css'>
         </head>
 
         <body>
+            <h1 style='color:chocolate; text-align: center'>Your Receipt</h1>
             <table>
                 <tr>
-                    <td>Name</td>
+                    <td><b>Name</b></td>
                     <td>".$name."</td>
                 </tr>
 
                 <tr>
-                    <td>Apples</td>
+                    <td><b>Apples</b></td>
                     <td>".$numOfApples."</td>
                 </tr>
 
                 <tr>
-                    <td>Oranges</td>
+                    <td><b>Oranges</b></td>
                     <td>".$numOfOranges."</td>
                 </tr>
 
                 <tr>
-                    <td>Bananas</td>
+                    <td><b>Bananas</b></td>
                     <td>". $numOfBananas."</td>
                 </tr>
 
                 <tr>
-                    <td>Payment</td>
+                    <td><b>Payment</b></td>
                     <td>".$paymentMethod."</td>
                 </tr>
+
+                <tr>
+                    <td><b>Total Cost</b></td>
+                    <td>".$cost."</td>
             </table>
         </body>
     </html>";
