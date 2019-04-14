@@ -34,3 +34,34 @@ function userInput(numFruits)
     }
 
 }
+
+//check for the presence of name and payment method
+function presence()
+{
+    //get the name
+    name = document.getElementById("name").value
+    //if name is not entered, raise alert
+    if (name=="")
+    {
+        alert("Please enter your name!") 
+        return false 
+    }
+
+    //get the tag as an object 
+    radios = document.getElementsByName("payment")
+    
+    //loop through each radio button
+    for (i=0; i<radios.length; i++)
+    {
+        //if it is checked, set check to be true, return 
+        if (radios[i].checked)
+        { 
+            return true
+        }
+    }
+    
+    //if do not return, it means that no option has been chosen, raise alert 
+    alert("Please choose your payment method!")
+    return false 
+    
+} 

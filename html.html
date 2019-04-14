@@ -16,9 +16,9 @@
         </p>
 
         <p>
-            <form action="server.php" id="order" method="post"> 
+            <form action="server.php" id="order" method="post" onsubmit="return presence();"> 
                 Name of User:
-                <input type="text" name="name"><br>
+                <input type="text" name="name" id="name"><br>
     
                 <!--if input into number of fruits textboxes changes, then raise an event-->  
                 Number of Apples:

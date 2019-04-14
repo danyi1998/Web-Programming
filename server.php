@@ -1,12 +1,26 @@
 <?php
     //read in the variables
     $name = $_POST["name"];
-
     $numOfApples = $_POST["apples"];
     $numOfOranges = $_POST["oranges"];
     $numOfBananas = $_POST["bananas"];
-
     $paymentMethod = $_POST["payment"];
+
+    //set $numOfApples to 0 if necessary
+    if ($numOfApples=="")
+    {
+        $numOfApples = 0;
+    }
+    //set $numOfOranges to 0 if necessary
+    if ($numOfOranges=="")
+    {
+        $numOfOranges = 0;
+    }
+    //set $numOfBananas to 0 if necessary
+    if ($numOfBananas=="")
+    {
+        $numOfBananas = 0;
+    }
     
     //compute the total cost 
     $cost = $numOfApples*0.69 + $numOfOranges*0.59 + $numOfBananas*0.39;
