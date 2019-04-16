@@ -17,21 +17,21 @@ function userInput(numFruits)
     {
         //store number of apples in a variable
         numOfApples = document.getElementById("apple").value
-        if (numOfApples=="")
+        if (numOfApples.search(/^$/)==0)
         {
             numOfApples = 0;
         }
         
         //store number of oranges in a variable
         numOfOranges = document.getElementById("orange").value
-        if (numOfOranges=="")
+        if (numOfOranges.search(/^$/)==0)
         {
             numOfOranges = 0;
         }
 
         //store number of bananas in a variable
         numOfBananas = document.getElementById("banana").value
-        if (numOfBananas=="")
+        if (numOfBananas.search(/^$/)==0)
         {
             numOfBananas = 0;
         }
@@ -54,17 +54,47 @@ function userInput(numFruits)
 
 }
 
-//check for the presence of name and payment method
-function presence()
+//performs checks post-submission 
+function submissionCheck()
 {
     //get the name
     name = document.getElementById("name").value
     //if name is not entered, raise alert
-    if (name=="")
+    if (name.search(/^$/)==0) 
     {
         alert("Please enter your name!") 
         return false 
     }
+
+    //get the input for number of apples
+    numOfApples = document.getElementById("apple").value
+    //if invalid, raise alert and return false 
+    if (((numOfApples.search(/^\d+$/)!=0) && (numOfApples.search(/^$/)!=0)))
+    {
+        alert("Input for number of apples is invalid!")
+        return false 
+    }
+    
+    //get the input for number of oranges
+    numOfOranges = document.getElementById("orange").value
+    //if invalid, raise alert and return false 
+    if (((numOfOranges.search(/^\d+$/)!=0) && (numOfOranges.search(/^$/)!=0)))
+    {
+        alert("Input for number of oranges is invalid!")
+        return false 
+    }
+
+    //get the input for number of bananas
+    numOfBananas = document.getElementById("banana").value
+    //if invalid, raise alert and return false 
+    if (((numOfBananas.search(/^\d+$/)!=0) && (numOfBananas.search(/^$/)!=0)))
+    {
+        alert("Input for number of bananas is invalid!")
+        return false 
+    }
+
+    //initialise checked to be false 
+    checked = false
 
     //get the tag as an object 
     radios = document.getElementsByName("payment")
@@ -72,15 +102,22 @@ function presence()
     //loop through each radio button
     for (i=0; i<radios.length; i++)
     {
-        //if it is checked, set check to be true, return 
+        //if it is checked
         if (radios[i].checked)
         { 
-            return true
+            //set checked to be true and break 
+            checked = true
+            break
         }
     }
     
-    //if do not return, it means that no option has been chosen, raise alert 
-    alert("Please choose your payment method!")
-    return false 
-    
+    //if checked remains false, raise alert and return false 
+    if(checked==false)
+    {
+        alert("Please choose your payment method!")
+        return false
+    }
+ 
+    //if not returned yet, all checks pass, return true
+    return true
 } 
